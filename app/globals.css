@@ -1,0 +1,101 @@
+:root {
+  --bg: #000;
+  --text: #ffffff;
+  --muted: #a1a1aa;
+  --primary: rgba(220, 38, 38, 0.4);
+  --primary-glow: #ef4444;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; min-height: 100%; }
+body {
+  background-color: var(--bg);
+  background-image: url('/background.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+button, input { font: inherit; }
+button { cursor: pointer; }
+.container { width: min(960px, calc(100% - 32px)); margin: 0 auto; }
+.center-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+
+/* สร้างกรอบกระจกใส */
+.card-glass {
+  background: rgba(40, 40, 40, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.narrow { width: min(440px, 100%); }
+h1,h2,h3 { margin-top: 0; margin-bottom: 8px; font-weight: 600; }
+.title-header { display: flex; justify-content: space-between; align-items: flex-start; }
+
+.label { display:block; font-weight:400; margin-bottom:10px; color: #fff; }
+
+/* ปรับช่องกรอกข้อมูลเป็นเส้นขอบสีแดงเรืองแสง */
+.input-glass {
+  width:100%; padding:14px 16px; 
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(239, 68, 68, 0.6);
+  border-radius: 12px; outline:none; color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.input-glass:focus {
+  border-color: var(--primary-glow);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+}
+.input-glass::placeholder { color: rgba(255, 255, 255, 0.4); }
+
+/* ปรับปุ่มให้เรืองแสงโทนแดง */
+.btn-glass {
+  width: 100%; border: 1px solid rgba(239, 68, 68, 0.8); 
+  border-radius: 12px; padding: 16px; font-weight: 600;
+  background: linear-gradient(180deg, rgba(50, 20, 20, 0.8) 0%, rgba(20, 5, 5, 0.9) 100%);
+  color: #fff; text-align: center;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 15px rgba(239, 68, 68, 0.2);
+  transition: all 0.2s;
+}
+.btn-glass:hover {
+  background: linear-gradient(180deg, rgba(65, 25, 25, 0.9) 0%, rgba(25, 8, 8, 1) 100%);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 0 20px rgba(239, 68, 68, 0.4);
+}
+.btn-glass:disabled { opacity:.5; cursor:not-allowed; box-shadow: none; }
+
+.stack { display:grid; gap:24px; }
+.muted { color:var(--muted); font-size: 14px; margin-bottom: 4px; }
+.error { color:#ff6b6b; background:rgba(255, 0, 0, 0.1); border:1px solid #ff6b6b; padding:10px 12px; border-radius:10px; }
+
+/* สไตล์ตัวเลขคิวเรืองแสงโทนแดง */
+.queue-number-neon {
+  font-size: 120px; 
+  line-height: 1; 
+  font-weight: 900; 
+  text-align: center; 
+  margin: 10px 0 20px;
+  color: transparent;
+  -webkit-text-stroke: 2px #fca5a5;
+  text-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
+  font-family: "Arial Black", impact, sans-serif;
+}
+
+/* ปุ่มแจ้งเตือนตอนถึงคิวโทนแดง */
+.alert-btn {
+  background: linear-gradient(90deg, #991b1b 0%, #dc2626 100%);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5);
+  border: 1px solid rgba(252, 165, 165, 0.5);
+}
+
+.row { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.small { font-size:12px; }

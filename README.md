@@ -78,3 +78,4 @@ User ไม่ต้อง Login และใช้ public token ใน URL เ�
 - หน้าแสดง QR code
 - validation และ error messages ภาษาไทยให้ละเอียดขึ้น
 - backup / monitoring
+# graduation-queue
